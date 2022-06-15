@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comments;
 use App\Models\Languages;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CommentsController extends Controller
 {
@@ -13,9 +14,21 @@ class CommentsController extends Controller
     }
 
     public function store(Request $request) {
-       
+        $topic = DB::table('topics')
+            ->where('title', $request->topic_title)
+            ->first();
+        $language = DB::table('languages')
+            ->where('title', $request->language_title)
+            ->first();
+        $formFields = $request->validate([
+            'content' => 'required'
+        ]);
 
-        return redirect('/checkout')->with('message', 'Order placed successfully!');
+        $formFields['topic_id'] = $topic->id;
+        $formFields['language_id'] = $language->id;
+        Comments::create($formFields);
+
+        return redirect('/dashboard')->with('message', 'Comment created successfully!');
     }
 }
 

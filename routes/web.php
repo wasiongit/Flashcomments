@@ -91,6 +91,7 @@ Route::delete('/languages/{language}', [LanguageController::class, 'destroy']);
 
 // To show 'add comments' form
 Route::get('/comments/create', [CommentsController::class, 'create']);
+Route::post('/comments/create', [CommentsController::class, 'store']);
 
 Route::get('/checkout', [CartController::class, 'index']);
 

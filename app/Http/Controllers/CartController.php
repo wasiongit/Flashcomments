@@ -11,7 +11,7 @@ class CartController extends Controller
 {
     public function index() {
         return view('checkout', [
-            'comments' => Comments::where('user_id', '=', auth()->id())->get()
+            
         ]);
     }
     public function list() {
