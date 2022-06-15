@@ -10,7 +10,7 @@
         <title>FlashComments</title>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
     <body>
         <nav class="navbar navbar-dark navbar-expand-md mb-5" style="background-color: black">
             <div class="container">
-                <a href="/" class="navbar-brand"><img src="{{ asset('images/logo.jpeg')}}" alt="" class="d-block align-text-bottom" width="250" height="auto"/>
+                <a href="/" class="navbar-brand"><img src="{{ secure_asset('images/logo.jpeg')}}" alt="" class="d-block align-text-bottom" width="250" height="auto"/>
                 <span class="ms-5">FlashComments</span> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
