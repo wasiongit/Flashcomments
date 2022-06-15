@@ -36,7 +36,7 @@
                     <label
                         for="content"
                         class="form-label"
-                    >Topic of Comment</label>
+                    >Comment content</label>
                     <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">

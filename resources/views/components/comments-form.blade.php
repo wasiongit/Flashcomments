@@ -8,8 +8,8 @@
             type="number"
             class="form-control w-50"
             name="{{$language->id}}"
-            value="{{old('comment_number')}}"/>
-            @error('comment_number')
+            value="{{old($language->id)}}"/>
+            @error($language->id)
             <p class="text-danger">{{$message}}</p>
             @enderror
     </div>

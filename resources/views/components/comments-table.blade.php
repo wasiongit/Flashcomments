@@ -4,6 +4,7 @@
         <tr>
           <th scope="col">Topic</th>
           <th scope="col">Language</th>
+          <th scope="col">Comment content</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>

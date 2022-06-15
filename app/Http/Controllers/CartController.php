@@ -19,4 +19,7 @@ class CartController extends Controller
             'orders' => Auth::user()
         ]);
     }
+    public function search(Request $request) {
+        dd($request);
+    }
 }
