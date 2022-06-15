@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Comments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -15,7 +16,7 @@ class CartController extends Controller
     }
     public function list() {
         return view('checkoutlist', [
-            'orders' => Order::where('user_id', '=', auth()->id())->get()
+            'orders' => Auth::user()
         ]);
     }
 }

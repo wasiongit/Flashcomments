@@ -89,8 +89,8 @@ Route::post('/languages/create', [LanguageController::class, 'store']);
 
 Route::delete('/languages/{language}', [LanguageController::class, 'destroy']);
 
-// To store needed comments and go to checkout
-Route::post('/comments/{topic}/create', [CommentsController::class, 'store']);
+// To show 'add comments' form
+Route::get('/comments/create', [CommentsController::class, 'create']);
 
 Route::get('/checkout', [CartController::class, 'index']);
 

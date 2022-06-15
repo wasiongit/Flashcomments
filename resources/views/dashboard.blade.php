@@ -69,20 +69,23 @@
     <hr />
     <section class="my-3">
         <div class="container">
-            <h4>Current Comment orders:</h4>
+            <a class="btn btn-danger btn-outline" href="/comments/create">
+                Add a new Comment
+            </a>
             <div class="">
-                @unless(count($languages) == 0)
+                @unless(count($comments) == 0)
                 <div class="container-lg my-5">
                     <div class="row">
                         @foreach($comments as $comment)
-                        <x-comments-table :comment="$comment" :language="$language"/>
+                        <x-comments-table :comment="$comment"/>
                         @endforeach
                         </div>
                         </div>
                         @else 
-                        <p>No Comment orders placed</p>
+                        <p>No Comments found</p>
                         @endunless
-            </div>
+            </div> 
+        
         </div>
     </section>
 <x-footer/>
