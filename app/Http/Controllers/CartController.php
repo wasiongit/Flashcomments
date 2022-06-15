@@ -21,6 +21,8 @@ class CartController extends Controller
     }
     public function search(Request $request) {
         $sum = array_sum($request->all());
-        dd($sum);
+        return view('checkout', [
+            'comments_num' => $sum
+        ]);
 }
 }

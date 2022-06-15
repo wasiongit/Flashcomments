@@ -5,8 +5,7 @@
                 Checkout
             </h2>
             <div class="my-3 d-flex gap-2 justify-content-center">
-                <h3>Total: @php
-                @endphp</h3>
+                <h3>Total: {{$comments_num}}</h3>
                 <a href="/checkout/list" class="btn btn-danger">Get List</a>
             </div>
         </div>
