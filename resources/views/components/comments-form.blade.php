@@ -7,9 +7,9 @@
         <input
             type="number"
             class="form-control w-50"
-            name="{{$language->id}}"
-            value="{{old($language->id)}}"/>
-            @error($language->id)
+            name="{{$language->title}}"
+            value="{{old($language->title)}}"/>
+            @error($language->title)
             <p class="text-danger">{{$message}}</p>
             @enderror
     </div>

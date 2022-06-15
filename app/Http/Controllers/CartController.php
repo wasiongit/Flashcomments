@@ -20,7 +20,6 @@ class CartController extends Controller
         ]);
     }
     public function search(Request $request) {
-        dd($request->all());
         $sum = array_sum($request->all());
         dd($sum);
 }
