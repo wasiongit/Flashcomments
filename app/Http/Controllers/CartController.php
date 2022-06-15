@@ -20,6 +20,9 @@ class CartController extends Controller
         ]);
     }
     public function search(Request $request) {
-        dd($request);
-    }
+        foreach ($request->except('_token') as $key => $part) {
+            $part += $part;
+        }
+        dd($part);
+}
 }
