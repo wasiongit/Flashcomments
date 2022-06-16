@@ -71,21 +71,7 @@
         <div class="container">
             <a class="btn btn-danger btn-outline" href="/comments/create">
                 Add a new Comment
-            </a>
-            <div class="">
-                @unless(count($comments) == 0)
-                <div class="container-lg my-5">
-                    <div class="row">
-                        @foreach($comments as $comment)
-                        <x-comments-table :comment="$comment"/>
-                        @endforeach
-                        </div>
-                        </div>
-                        @else 
-                        <p>No Comments found</p>
-                        @endunless
-            </div> 
-        
+            </a>        
         </div>
     </section>
 <x-footer/>

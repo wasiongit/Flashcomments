@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Database\Factories\CommentsFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Comments extends Model
 {
     use HasFactory;
+    protected static function newFactory()
+    {
+        return CommentsFactory::new();
+    }
     protected $fillable = [
         'topic_id',
         'language_id',
