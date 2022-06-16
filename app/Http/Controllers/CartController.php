@@ -17,6 +17,7 @@ class CartController extends Controller
         $sum = array_sum($request->all());
         foreach ($data as $key => $value) {
             $languages = Languages::where('title', '=', $key)->get();
+            dd($languages->id);
             $comment_content = DB::table('comments')
                 ->where('topic_id', $topic_id)
                 ->where('language_id', $languages->id)
