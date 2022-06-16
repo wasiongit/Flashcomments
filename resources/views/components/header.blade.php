@@ -60,7 +60,7 @@
                          </li>
                         @else
                         <li class="nav-item p-3">
-                            <a href="/contact" class="nav-link fw-bold" style="font-family: 'Poppins', sans-serif;"
+                            <a href="#" class="nav-link fw-bold" style="font-family: 'Poppins', sans-serif;"
                                 >
                                 Contact</a
                             >

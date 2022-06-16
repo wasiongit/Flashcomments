@@ -26,7 +26,7 @@ use App\Http\Controllers\LanguageController;
 Route::get('/', [CategoryController::class, 'all']);
 
 // Show Login form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
 
 Route::post('/logout', [UserController::class, 'logout']);
 
@@ -43,7 +43,7 @@ Route::get('/holidays', function () {
     return view('categories.holidays');
 });
 
-Route::get('/dashboard', [CategoryController::class, 'index']);
+Route::get('/dashboard', [CategoryController::class, 'index'])->middleware('auth');
 
 Route::post('/admin/login', [UserController::class, 'authenticate']);
 Auth::routes();

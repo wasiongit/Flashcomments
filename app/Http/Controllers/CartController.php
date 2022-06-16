@@ -9,17 +9,13 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function index() {
-        return view('checkout', [
-            
-        ]);
-    }
+    public $user_request;
+    
     public function list() {
-        return view('checkoutlist', [
-            'orders' => Auth::user()
-        ]);
+        dd($this->user_request);
     }
     public function search(Request $request) {
+        $this->user_request = $request->all();
         $sum = array_sum($request->all());
         return view('checkout', [
             'comments_num' => $sum
