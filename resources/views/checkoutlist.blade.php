@@ -1,16 +1,13 @@
 <x-header />
-        @php
-            dd($orders)
-        @endphp
-        <section class="my-5">
-            <div class="container">
+    <section class="my-5">
+        <div class="container">
                 <div class="d-flex gap-3 justify-content-center">
                 <h2 class="">Your Comment List</h2>
                 <button onclick="copy()" class="btn btn-primary">
                     Copy All</button>
                 </div>
                 <div class="my-3 text-center">
-                    <input type="text" value="{{$order->comment}}" id="commentbox" class="commentbox">
+                    <input type="text" value="{{$comment_content->content}}" id="commentbox" class="commentbox">
                 </div> 
                 
             </div>

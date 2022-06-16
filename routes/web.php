@@ -97,4 +97,4 @@ Route::get('/checkout', [CartController::class, 'index']);
 
 Route::get('/checkout/list', [CartController::class, 'list']);
 
-Route::post('/comments/search', [CartController::class, 'search']);
+Route::post('/comments/{topic_id}/search', [CartController::class, 'search']);

@@ -4,7 +4,7 @@
             <h2>{{$topic->title}}</h2>
             <p class="text-muted">Select how many comments you want per language</p>
             <div class="">
-                <form method="POST" action="/comments/search">
+                <form method="POST" action="/comments/{{$topic->id}}/search">
                     @csrf
                     @unless(count($languages) == 0)
                     <div class="container-lg my-5">
