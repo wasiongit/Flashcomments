@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\Comments::factory(20)->create();
+        $this->call([
+            CommentsSeeder::class,
+        ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
