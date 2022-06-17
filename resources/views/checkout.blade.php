@@ -13,21 +13,17 @@
         <div class="container">
                 <div class="d-flex gap-3 justify-content-center">
                 <h2 class="">Your Comment List</h2>
-                <button class="btn btn-primary" data-clipboard-target="#commentbox" data-clipboard-action="copy">
+                <button class="btn btn-primary" id="commentBtn">
                     Copy All</button>
                 </div>
                 @unless(count($comment_contents) == 0)
                 <div class="my-5">
                     <div class="my-3 text-center">
-                        <div class="card p-2 p-md-5">
-                            <div class="card-body">
-                                <p class="card-text" id="commentbox">
-                                    @foreach ($comment_contents as $comment_content) 
-                                        {{$loop->index +1 . ". " .$comment_content}}<br/>
-                                    @endforeach
-                                </p>
-                            </div>
-                        </div>
+                        <textarea name="" id="commentbox" cols="70" rows="60" class="form-control" readonly>
+                            @foreach ($comment_contents as $comment_content) 
+                            {{$loop->index +1 . ". " .$comment_content}}
+                            @endforeach
+                        </textarea>
                     </div>
                         </div>
                         </div>
@@ -39,6 +35,12 @@
             </div>
         </section>
     <script>
-        let clipboard1 = new ClipboardJS('#commentbox');
+        let commentbox = document.getElementById('commentbox');
+        let commentbtn = document.getElementById('commentBtn');
+
+        commentbtn.onclick = function() {
+            commentbox.select();
+            document.execCommand("copy");
+        }
     </script>
 <x-footer />
