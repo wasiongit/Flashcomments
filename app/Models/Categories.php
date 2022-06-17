@@ -13,6 +13,12 @@ class Categories extends Model
         'logo'
     ];
 
+    public function scopeFilter($query, array $filters) {
+        if ($filters['search'] ?? false) {
+            $query->where('title', 'like', '%'. request('search'). '%');
+        }
+    }
+
     // Relationship with Topics
     public function topic() {
         return $this->hasMany(Topics::class, 'category_id');

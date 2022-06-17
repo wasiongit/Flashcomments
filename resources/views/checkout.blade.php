@@ -13,7 +13,7 @@
         <div class="container">
                 <div class="d-flex gap-3 justify-content-center">
                 <h2 class="">Your Comment List</h2>
-                <button onclick="copy()" class="btn btn-primary">
+                <button class="btn btn-primary" data-clipboard-target="#commentbox" data-clipboard-action="copy">
                     Copy All</button>
                 </div>
                 @unless(count($comment_contents) == 0)
@@ -22,8 +22,9 @@
                         <div class="card p-2 p-md-5">
                             <div class="card-body">
                                 <p class="card-text" id="commentbox">
-                                    @php foreach ($comment_contents as $comment_content)
-                                    echo $comment_content."<br>"@endphp
+                                    @foreach ($comment_contents as $comment_content) 
+                                        {{$loop->index +1 . ". " .$comment_content}}<br/>
+                                    @endforeach
                                 </p>
                             </div>
                         </div>
@@ -38,19 +39,6 @@
             </div>
         </section>
     <script>
-        function copy() {
-            /* Get the text field */
-            var copyText = document.getElementById("commentbox");
-
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-            /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value);
-
-            /* Alert the copied text */
-            alert("Copied the text: " + copyText.value);
-            }
+        let clipboard1 = new ClipboardJS('#commentbox');
     </script>
 <x-footer />

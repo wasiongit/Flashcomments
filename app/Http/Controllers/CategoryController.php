@@ -25,7 +25,8 @@ class CategoryController extends Controller
 
     public function all() {
         return view('index', [
-            'categories' => Categories::latest()->get()
+            'categories' => Categories::latest()->filter
+            (request(['search']))->get()
         ]);
     }
     public function show(Categories $category) {

@@ -2,6 +2,7 @@
     <section>
         <div class="container">
             <h2 class="text-center">Welcome to <span class="h2 text-danger">Flash<span class="h2 text-warning">comments</span></span></h2>
+            @include('partials._search')
             <p class="text-muted">Pick a category to get started</p>
             <div>
                 @unless(count($categories) == 0)

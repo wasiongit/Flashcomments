@@ -19,7 +19,7 @@
 
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ secure_asset('css/customstyles.css') }}" rel="stylesheet">
+        <link href="{{ Secure_asset('css/customstyles.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         
         <!-- favicon files -->
@@ -28,11 +28,12 @@
             <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
             <link rel="manifest" href="{{asset('favicon/site.webmanifest')}}">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.4.5/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-md mb-5" style="background-color: black">
             <div class="container">
-                <a href="/" class="navbar-brand"><img src="{{ secure_asset('images/logo.jpeg')}}" alt="" class="d-block align-text-bottom" width="250" height="auto"/>
+                <a href="/" class="navbar-brand"><img src="{{ asset('images/logo.jpeg')}}" alt="" class="d-block align-text-bottom" width="250" height="auto"/>
                 <span class="ms-5">FlashComments</span> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
