@@ -17,10 +17,24 @@ class CommentsSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach(range(1,100) as $index) {
+        foreach(range(1,20) as $index) {
             DB::table('comments')->insert([
                 'topic_id' => 1,
                 'language_id' => 1,
+                'content' => $faker->sentence(5)
+            ]);
+        }
+        foreach(range(1,20) as $index) {
+            DB::table('comments')->insert([
+                'topic_id' => 1,
+                'language_id' => 2,
+                'content' => $faker->sentence(5)
+            ]);
+        }
+        foreach(range(1,20) as $index) {
+            DB::table('comments')->insert([
+                'topic_id' => 1,
+                'language_id' => 3,
                 'content' => $faker->sentence(5)
             ]);
         }

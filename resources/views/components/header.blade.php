@@ -23,10 +23,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         
         <!-- favicon files -->
-            <link rel="apple-touch-icon" sizes="180x180" href="{{secure_asset('favicon/apple-touch-icon.png')}}">
-            <link rel="icon" type="image/png" sizes="32x32" href="{{secure_asset('favicon/favicon-32x32.png')}}">
-            <link rel="icon" type="image/png" sizes="16x16" href="{{secure_asset('favicon/favicon-16x16.png')}}">
-            <link rel="manifest" href="{{secure_asset('favicon/site.webmanifest')}}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon/apple-touch-icon.png')}}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon/favicon-32x32.png')}}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
+            <link rel="manifest" href="{{asset('favicon/site.webmanifest')}}">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.4.5/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
@@ -66,7 +66,7 @@
                             >
                         </li>
                         <li class="nav-item p-3">
-                            <a href="/checkout" class="nav-link fw-bold" style="font-family: 'Poppins', sans-serif;"
+                            <a href="#" class="nav-link fw-bold" style="font-family: 'Poppins', sans-serif;"
                                 >
                                 <i class="bi bi-cart icon"></i> Cart</a
                             >

@@ -6,7 +6,6 @@
             </h2>
             <div class="my-3 d-flex gap-2 justify-content-center">
                 <h3>Total: {{$comments_num}}</h3>
-                <a href="/checkout/list" class="btn btn-danger">Get List</a>
             </div>
         </div>
     </section>
@@ -17,9 +16,24 @@
                 <button onclick="copy()" class="btn btn-primary">
                     Copy All</button>
                 </div>
-                <div class="my-3 text-center">
-                    <input type="text" value="{{$comment_content->content }}" id="commentbox" class="commentbox">
-                </div> 
+                @unless(count($comment_contents) == 0)
+                <div class="my-5">
+                    <div class="my-3 text-center">
+                        <div class="card p-2 p-md-5">
+                            <div class="card-body">
+                                <p class="card-text" id="commentbox">
+                                    @php foreach ($comment_contents as $comment_content)
+                                    echo $comment_content."<br>"@endphp
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        </div>
+                        @else 
+                        <p>No Comments found</p>
+                        @endunless
+                
                 
             </div>
         </section>
