@@ -8,7 +8,7 @@
             type="number"
             class="form-control w-50"
             name="{{$language->title}}"
-            value="{{old($language->title)}}"/>
+            value="{{old($language->title)}}" max="100" min="1"/>
             @error($language->title)
             <p class="text-danger">{{$message}}</p>
             @enderror

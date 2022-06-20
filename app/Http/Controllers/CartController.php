@@ -31,6 +31,7 @@ class CartController extends Controller
             $content[] = array_column($value, 'content');
         }
         $finalArray = call_user_func_array('array_merge', $content);
+        shuffle($finalArray);
         return view('checkout', [
             'comments_num' => $sum,
             'comment_contents' => $finalArray
